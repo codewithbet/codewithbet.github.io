@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codewithBet | Geliştirici Günlüğü</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css" media="all">
+      /* Genel Ayarlar ve Sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f6fa; /* Hafif gri, göz yormayan arka plan */
+    color: #2b2d42;
+    line-height: 1.6;
+}
+
+/* Üst Menü Tasarımı */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e3f; /* Koyu lacivert/siyah */
+    color: white;
+    padding: 1.2rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff2e93; /* Canlı kırmızı/pembe vurgu rengi */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: rgba(255, 46, 147, 1);
+}
+
+/* Karşılama Alanı */
+header {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #f5f6fa;
+    border-bottom: 1px solid #f5f6fa;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #1e1e3f;
+    margin-bottom: 10px;
+}
+
+.alt-baslik {
+    font-size: 1.2rem;
+    color: #ff2e93;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.aciklama {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #4a4a68;
+}
+
+/* Kutu (Grid) Alanı */
+#notlar {
+    padding: 4rem 5%;
+}
+
+#notlar h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #1e1e3f;
+}
+
+.kutu-kapsayici {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap; /* Tablette ve telefonda alt alta geçmesini sağlar */
+}
+
+.kutu {
+    background: rgba(255,255,255,1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(30,30,63,0.06);
+    border: 1px solid rgba(30, 30, 63, 0.05);
+    flex: 1;
+    min-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kutu:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(30,30,63,0.12), 0 4px 12px rgba(255, 46, 147, 0.3);
+}
+
+.kutu h3 {
+    margin-bottom: 10px;
+    color: rgba(30, 30, 63, 1);
+}
+
+.kutu p {
+    color: rgba(74,74,104,1);
+    margin-bottom: 20px;
+}
+
+.btn {
+     display: inline-block;
+     text-decoration: none;
+     color: rgba(255, 255, 255, 1);
+     background-color: rgba(255, 46, 147, 0.8);
+     padding: 8px 16px;
+     border-radius: 6px;
+     font-size: 0.9rem;
+     transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: rgba(216, 27, 119, 1);
+}
+
+/* Genel Bölüm Boşlukları */
+.bolum {
+    padding: 4rem 5%;
+}
+
+.bolum h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: rgba(30, 30, 63, 1);
+}
+
+/* Yetenek Rozetleri Tasarımı */
+.rozet-kapsayici {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rozet {
+    background-color: rgba(255, 46, 147, 0.1); /* Logonun pembesinin %10 şeffaf hali */
+    color: rgba(255, 46, 147, 1);
+    padding: 10px 20px;
+    border-radius: 30px; /* Hap görünümü verir */
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: transform 0.3s;
+}
+
+.rozet:hover {
+    transform: translateY(-3px);
+    background-color: rgba(255, 46, 147, 0.2);
+}
+
+/* Footer (Alt Bilgi) Tasarımı */
+footer {
+    background-color: rgba(30, 30, 63, 1);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+
+    </style>
+    
+</head>
+<body>
+
+    <nav>
+        <div class="logo">codewithBet</div>
+        <ul class="menu">
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#notlar">Öğrendiklerim</a></li>
+        </ul>
+    </nav>
+
+    <header id="hakkimda">
+        <h1>Merhaba, ben Betül! 👋</h1>
+        <p class="alt-baslik">Matematik ve Bilgisayar Programcılığı öğrencisiyim.</p>
+        <p class="aciklama">
+           Selçuk Üniversitesi'nde Matematik okurken rakamların ve denklemlerin dünyasından, kodların sınır tanımayan evrenine uzanan bir yolculuğa çıktım.
+Sadece işin teorisinde kalmayıp bir şeyler inşa etmek istediğim için Anadolu Üniversitesi'nde Bilgisayar Programcılığı ile bu tutkumu harmanladım.
+<br><br>
+Burada, kodlarla boğuşurken öğrendiklerimi, ilham veren anlarımı ve bitmek bilmeyen merakımı "açıkta öğrenme" felsefesiyle paylaşıyorum.
+Benimle bu yolculuğa ortak olmak istersen, hemen aşağıdan dijital günlüğüme göz atabilirsin!
+    </header>
+
+        <section id="yetenekler" class="bolum">
+        <h2>Bildiklerim ve Üzerine Çalıştıklarım</h2>
+        <div class="rozet-kapsayici">
+            <span class="rozet">HTML5 & CSS3</span>
+            <span class="rozet">T-SQL</span>
+            <span class="rozet">Godot Engine (3D)</span>
+            <span class="rozet">PHP</span>
+            <span class="rozet">C++, C#</span>
+            <span class="rozet">Python</span>
+        </div>
+    </section>
+
+    <section id="projeler" class="bolum">
+        <h2>Üzerine Çalıştığım Projeler</h2>
+        <div class="kutu-kapsayici">
+            <div class="kutu">
+                <h3>Aura (Web Platformu)</h3>
+                <p>Kullanıcıların kitap yazıp okuyabileceği, Firebase veritabanı entegrasyonuna sahip web platformu tasarımım.</p>
+                <a href="aura-projesi.html" class="btn">Çok Yakında...</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="notlar" class="bolum" style="background-color: rgba(255, 255, 255, 1);">
+        <h2>Öğrenme Günlüğüm</h2>
+        <div class="kutu-kapsayici">
+            <div class="kutu" style="box-shadow: none; border: 2px solid rgba(30, 30, 63, 0.05);">
+                <h3>Siber Güvenlik Laboratuvarları</h3>
+                <p>TryHackMe üzerinde çözdüğüm CTF'ler, ağ zafiyetleri ve BTK Akademi notlarım.</p>
+                <a href="siber-guvenlik.html" class="btn" style="background-color: rgba(30, 30, 63, 1);">Çok Yakında...</a>
+            </div>
+
+            <div class="kutu" style="box-shadow: none; border: 2px solid rgba(30, 30, 63, 0.05);">
+                <h3>Web ve Sistem Mimarisi</h3> 
+                <p>Modern web siteleri tasarlarken kullandığım CSS ipuçları ve arka plan entegrasyon notları.</p>
+                <a href="web-notlari.html" class="btn" style="background-color: rgba(30, 30, 63, 1);">Çok Yakında...</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 codewithBet
+        <br /> Açıkta öğrenme felsefesiyle kodlandı.</p>
+    </footer>
+
+
+</body>
+</html>
