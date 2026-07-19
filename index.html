@@ -187,6 +187,44 @@ footer {
     padding: 2rem 0;
     margin-top: 2rem;
 }
+/* TEMA BUTONU GENEL TASARIMI (Gündüz Modu) */
+.tema-btn {
+    background-color: transparent !important; /* İnatçı beyaz arka planı tamamen yok eder */
+    border: 2px solid #ff2e93 !important; /* Sitenin imza pembesiyle şık bir çerçeve */
+    color: #ff2e93 !important; /* İçindeki yazının rengi */
+    padding: 8px 20px !important; /* Butonu dolgunlaştırır, şekil verir */
+    border-radius: 30px !important; /* Köşeleri tamamen yuvarlatıp 'hap' şekline sokar */
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Hover (üzerine gelme) efektini yumuşatır */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit; /* Sitenin kendi yazı tipini kullanmasını sağlar */
+}
+
+/* BUTONUN ÜZERİNE GELDİĞİNDE (Hover Efekti) */
+.tema-btn:hover {
+    background-color: #ff2e93 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(255, 46, 147, 0.4) !important; /* Etrafına hafif pembe bir neon parlama verir */
+}
+
+/* GECE MODUNDA BUTONUN DURUŞU */
+body.gece-modu .tema-btn {
+    border-color: #b4b8ca !important; /* Gece modunda menüyle uyumlu soft gri/mavi çerçeve */
+    color: #b4b8ca !important;
+}
+
+body.gece-modu .tema-btn:hover {
+    background-color: #b4b8ca !important;
+    color: #08090f !important; /* Gece modunda üzerine gelince yazıyı koyulaştırır */
+    box-shadow: 0 4px 15px rgba(180, 184, 202, 0.3) !important;
+}
+
+
+
 
         /*Gece Modu*/
 
