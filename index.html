@@ -291,35 +291,6 @@ nav ul li {
     list-style-type: none;
 }
 
-/* ZİYARETÇİ SAYACI KUTUSU ÖZEL TASARIMI */
-.sayac-kutusu {
-    text-align: center;
-    max-width: 250px; /* Kutu ekranı boydan boya kaplamasın, rozet boyutunda derli toplu dursun */
-    margin: 50px auto; /* Sayfanın altına doğru tam ortalasın */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Yazı ile rozet arasındaki boşluk */
-}
-
-.sayac-kutusu h3 {
-    font-size: 16px;
-    margin: 0;
-    color: #ff2e93 !important; /* Başlık sitenin imza pembesi olsun */
-}
-
-/* Sayacın üzerine gelince oluşan 'Aura' animasyonu */
-.sayac-kutusu img {
-    transition: all 0.3s ease;
-    border-radius: 4px; /* Köşeleri hafif yumuşatalım */
-}
-
-.sayac-kutusu:hover img {
-    transform: scale(1.08); /* Fareyle üzerine gelince rozet hafifçe büyüsün */
-    box-shadow: 0 5px 15px rgba(255, 46, 147, 0.5); /* Pembe bir neon parlama yayısın */
-}
-
 
 
         
@@ -398,11 +369,6 @@ Benimle bu yolculuğa ortak olmak istersen, hemen aşağıdan dijital günlüğ�
         <p>&copy; 2026 codewithBet
         <br /> Açıkta öğrenme felsefesiyle kodlandı.</p>
         
-       <!-- Ziyaretçi Sayacı Rozeti (Web Site Versiyonu) -->
-<div class="kutu sayac-kutusu" style="background-color: transparent !important; border: none !important; box-shadow: none !important; text-align: center; margin-top: 40px; margin-bottom: 40px;">
-    <h3 style="color: #ff2e93; font-size: 16px; margin-bottom: 15px;">👀 Ziyaretçiler</h3>
-    <img src="https://api.visitorbadge.io/api/visitors?path=codewithbet.github.io&label=ZIYARETCI&labelColor=%2308090f&countColor=%23ff2e93" alt="Ziyaretçi Sayacı">
-</div>
 
 
 
