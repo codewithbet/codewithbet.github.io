@@ -287,7 +287,42 @@ body.gece-modu nav {
     background-color: #08090f !important;
     border-bottom: none !important;
 }
+nav ul li {
+    list-style-type: none;
+}
 
+/* ZİYARETÇİ SAYACI KUTUSU ÖZEL TASARIMI */
+.sayac-kutusu {
+    text-align: center;
+    max-width: 250px; /* Kutu ekranı boydan boya kaplamasın, rozet boyutunda derli toplu dursun */
+    margin: 50px auto; /* Sayfanın altına doğru tam ortalasın */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Yazı ile rozet arasındaki boşluk */
+}
+
+.sayac-kutusu h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #ff2e93 !important; /* Başlık sitenin imza pembesi olsun */
+}
+
+/* Sayacın üzerine gelince oluşan 'Aura' animasyonu */
+.sayac-kutusu img {
+    transition: all 0.3s ease;
+    border-radius: 4px; /* Köşeleri hafif yumuşatalım */
+}
+
+.sayac-kutusu:hover img {
+    transform: scale(1.08); /* Fareyle üzerine gelince rozet hafifçe büyüsün */
+    box-shadow: 0 5px 15px rgba(255, 46, 147, 0.5); /* Pembe bir neon parlama yayısın */
+}
+
+
+
+        
 
 
 
@@ -364,10 +399,13 @@ Benimle bu yolculuğa ortak olmak istersen, hemen aşağıdan dijital günlüğ�
         <br /> Açıkta öğrenme felsefesiyle kodlandı.</p>
         
        <!-- Ziyaretçi Sayacı Rozeti  -->
-<div class="ziyaretci-sayaci" style="text-align: center; margin-top: 30px; margin-bottom: 30px;">
-    <p style="font-size: 14px; margin-bottom: 10px;">Sayfama Göz Atanlar</p>
-    <img src="https://komarev.com/ghpvc/?username=codewithbet&color=ff2e93&style=flat-square&label=ZIYARETCI" alt="Ziyaretçi Sayacı">
+<!-- Ziyaretçi Sayacı Rozeti (Siteyle Tam Uyumlu Şık Kutu) -->
+<div class="kutu sayac-kutusu">
+    <h3>👀 Ziyaretçiler</h3>
+    <img src="https://komarev.com/ghpvc/?username=codewithbet-portfolyo&color=ff2e93&style=for-the-badge&label=ZIYARETCI" alt="Ziyaretçi Sayacı">
 </div>
+
+
 
 
 </div>
